@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-void	ft_test(unsigned int n, char c)
-{
-	if (n >= 0 && (c >= 'a' && c <= 'z'))
-	{
-		c = c - 32;
-		write(1, &c, 1);
-	}
-}
+// void	ft_test(unsigned int n, char c)
+// {
+// 	if (n >= 0 && (c >= 'a' && c <= 'z'))
+// 	{
+// 		c = c - 32;
+// 		write(1, &c, 1);
+// 	}
+// }
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }

@@ -44,6 +44,7 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	len = ft_compter(n);
+	// printf("len : %d\n", len);
 	resultat = malloc(sizeof(char) * (len + 1));
 	if (resultat == NULL)
 		return (NULL);
@@ -56,32 +57,20 @@ char	*ft_itoa(int n)
 		n = n / 10;
 		i++;
 	}
-	if (resultat[0] == '0' && len > 2)
+	// printf("resultat : %s\n", resultat);
+	if (resultat[0] == '0' && len >= 2)
 		resultat[0] = '-';
 	resultat[len] = '\0';
 	return (resultat);
 }
 
-/*int	main(void)
-{
-	char	*np = ft_itoa(2411);
-	char	*np2 = ft_itoa(112400);
-	char	*nn = ft_itoa(-2147483648);
-	char	*nn2 = ft_itoa(-0);
-	char	*zero = ft_itoa(0);
-	char	*n1 = ft_itoa(5);
-	printf("%d\n", (-25)%10);
-	printf("2411 = %s\n", np);
-	printf("112400 = %s\n", np2);
-	printf("-2147483648 = %s\n", nn);
-	printf("-456543000 = %s\n", nn2);
-	printf("0 = %s\n", zero);
-	printf("5 = %s\n", n1);
-	free(np);
-	free(np2);
-	free(nn);
-	free(nn2);
-	free(zero);
-	free(n1);
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char	*np = ft_itoa(-9);
+
+// 	printf("2411 = %s\n", np);
+
+// 	free(np);
+
+// 	return (0);
+// }
