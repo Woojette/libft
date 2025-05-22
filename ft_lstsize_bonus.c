@@ -6,7 +6,7 @@
 /*   By: wooyang <wooyang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 16:06:47 by wooyang           #+#    #+#             */
-/*   Updated: 2025/05/16 16:16:32 by wooyang          ###   ########.fr       */
+/*   Updated: 2025/05/22 17:31:51 by wooyang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*temp;
-	int	i;
+	int		i;
 
 	temp = lst;
 	i = 0;
