@@ -6,7 +6,7 @@
 /*   By: wooyang <wooyang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:06:39 by wooyang           #+#    #+#             */
-/*   Updated: 2025/05/14 16:08:53 by wooyang          ###   ########.fr       */
+/*   Updated: 2025/05/22 14:36:55 by wooyang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if (s[i] == '\0' && (unsigned char)c ==  0)
+	if (s[i] == '\0' && (unsigned char)c == 0)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-

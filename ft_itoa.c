@@ -6,13 +6,13 @@
 /*   By: wooyang <wooyang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 13:44:00 by wooyang           #+#    #+#             */
-/*   Updated: 2025/05/14 19:25:23 by wooyang          ###   ########.fr       */
+/*   Updated: 2025/05/22 14:35:56 by wooyang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_compter(int n)
+static int	ft_compter_itoa(int n)
 {
 	int	signe;
 	int	len;
@@ -43,8 +43,7 @@ char	*ft_itoa(int n)
 	char	*resultat;
 
 	i = 0;
-	len = ft_compter(n);
-	// printf("len : %d\n", len);
+	len = ft_compter_itoa(n);
 	resultat = malloc(sizeof(char) * (len + 1));
 	if (resultat == NULL)
 		return (NULL);
@@ -57,7 +56,6 @@ char	*ft_itoa(int n)
 		n = n / 10;
 		i++;
 	}
-	// printf("resultat : %s\n", resultat);
 	if (resultat[0] == '0' && len >= 2)
 		resultat[0] = '-';
 	resultat[len] = '\0';

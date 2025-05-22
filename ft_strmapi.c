@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-char	ft_test(unsigned int n, char c)
-{
-	if (n >= 0 && (c >= 'a' && c <= 'z'))
-		c = c - 32;
-	return (c);
-}
+// static char	ft_test(unsigned int n, char c)
+// {
+// 	if (n >= 0 && (c >= 'a' && c <= 'z'))
+// 		c = c - 32;
+// 	return (c);
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -35,6 +35,12 @@ SRCS		= ft_isalpha.c\
 		  ft_putendl_fd.c\
 		  ft_putnbr_fd.c
 
+BONUS		= ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c
+
+BONUS_OBJS	= $(BONUS:.c=.o)
 CC = cc
 OBJS = ${SRCS:.c=.o}
 RM = rm -f
@@ -48,13 +54,16 @@ $(NAME) : $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 all : $(NAME)
 
 fclean : clean
 	$(RM) $(NAME)
 
+bonus : $(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

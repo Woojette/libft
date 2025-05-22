@@ -6,7 +6,7 @@
 /*   By: wooyang <wooyang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:42:18 by wooyang           #+#    #+#             */
-/*   Updated: 2025/05/07 17:43:29 by wooyang          ###   ########.fr       */
+/*   Updated: 2025/05/22 16:00:30 by wooyang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	n = 0;
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	resultat = malloc((len + 1) * sizeof(char));
@@ -36,10 +38,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	resultat[i] = '\0';
 	return (resultat);
 }
-/*
-int	main(void)
-{
-	char	texte[] = "coucou123456";
-	printf("%s\n", ft_substr(texte, 20, 3));
-	return (0);
-}*/
+
+// int	main(void)
+// {
+// 	char	texte[] = "0123456789abcdef123465789";
+// 	printf("%s\n", ft_substr(texte, 5, 10));
+// 	return (0);
+// }
